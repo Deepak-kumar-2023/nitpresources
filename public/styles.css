@@ -1,0 +1,261 @@
+
+
+
+ body {
+     font-family: 'Poppins', sans-serif;
+     margin: 0;
+     padding: 0;
+     background: linear-gradient(135deg, #ffe6f0, #ffeaf5);
+     color: #4b2e2e;
+     animation: fadeInBody 1s ease-in-out;
+ }
+
+ @keyframes fadeInBody {
+     from { opacity: 0; }
+     to { opacity: 1; }
+ }
+
+ .container {
+     max-width: 1000px;
+     margin: auto;
+     padding: 2rem;
+ }
+
+ h1 {
+     text-align: center;
+     font-size: 2.5rem;
+     color: #d6336c;
+     animation: fadeInDown 1s ease;
+ }
+
+ @keyframes fadeInDown {
+     from { transform: translateY(-20px); opacity: 0; }
+     to { transform: translateY(0); opacity: 1; }
+ }
+
+ label {
+     font-size: 1.2rem;
+     color: #b03060;
+ }
+
+ select {
+     padding: 0.6rem 1rem;
+     font-size: 1rem;
+     border-radius: 10px;
+     border: 1px solid #d6336c;
+     margin-left: 10px;
+     background: #fff0f5;
+     color: #4b2e2e;
+ }
+
+ .year {
+     margin: 2rem 0;
+     padding: 1rem;
+     background: rgba(255, 240, 245, 0.5);
+     border-radius: 12px;
+     box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+    
+ }
+
+ .year h2 {
+     color: #b03060;
+     border-bottom: 2px solid #ff69b4;
+     padding-bottom: 0.5rem;
+     animation: fadeInLeft 1s ease;
+ }
+
+ @keyframes fadeInLeft {
+     from { transform: translateX(-20px); opacity: 0; }
+     to { transform: translateX(0); opacity: 1; }
+ }
+
+ /* Fancy Card 💌 */
+ .fancy-card {
+     background: rgba(255, 255, 255, 0.85);
+     border: 1px solid #ffb6c1;
+     border-radius: 16px;
+     padding: 20px;
+     margin: 15px 0;
+     box-shadow: 0 8px 20px rgba(255,105,180, 0.3);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     animation: popIn 0.6s ease forwards;
+     opacity: 0;
+     display: flex;
+     align-items: center;
+      justify-content: space-between;
+ }
+
+ .fancy-card:hover {
+     transform: translateY(-5px) scale(1.02);
+     box-shadow: 0 12px 30px rgba(255,105,180, 0.4);
+ }
+
+ .fancy-card h3 {
+     margin: 0;
+     font-size: 1.3rem;
+     color: #e75480;
+ }
+
+ .fancy-card p {
+     margin: 8px 0;
+     color: #4b2e2e;
+ }
+
+ .fancy-card a {
+     display: inline-block;
+     margin-top: 10px;
+     background: linear-gradient(135deg, #ff69b4, #ff1493);
+     color: white;
+     padding: 10px 20px;
+     border-radius: 8px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: background 0.3s ease;
+ }
+
+ .fancy-card a:hover {
+     background: linear-gradient(135deg, #ff1493, #ff69b4);
+ }
+
+ @keyframes popIn {
+     from { transform: scale(0.95); opacity: 0; }
+     to { transform: scale(1); opacity: 1; }
+ }
+
+
+
+
+ /*##########################################################################*/
+
+
+
+
+
+
+
+.loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: #fff0f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.spinner {
+  font-size: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+#loader-text {
+  font-size: 18px;
+  color: #ff1493;
+  text-align: center;
+}
+
+.loader.hidden {
+  display: none;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 💘 Heart Animation */
+/* #heart-container {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+ 
+  animation: heartbeat 2.5s infinite;
+
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+} */
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
+  background-size: cover;
+  animation: floatUp 2s ease-out forwards;
+}
+
+@keyframes floatUp {
+  0% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(3) translateY(-100px);
+  }
+}
+
+
+#heart-rain-container {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.heart-drop {
+  position: absolute;
+  top: -30px;
+  font-size: 24px;
+  animation: fall 4s linear forwards;
+  color: #ff3366;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+
+.heart {
+  pointer-events: none;
+  z-index: 999;
+}
+
+
+
+/* ######################################################################### */
+
+
+
+

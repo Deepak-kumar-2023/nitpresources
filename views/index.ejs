@@ -1,0 +1,66 @@
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Resources </title>
+    <meta name="description" content="A hub for students to access resources based on their branch and year.">
+    <meta name="author" content="Deepak">
+    <meta name="keywords" content="student resources, education, CSE, ME, CE, ECE">
+    <link rel="stylesheet" href="styles.css">
+
+  
+</head>
+<body>
+        <!-- Loading Spinner -->
+
+            <div id="loader" class="loader hidden">
+                <div class="spinner">💖</div>
+                <p id="loader-text">Loading...</p>
+            </div>
+
+
+
+    <div class="container">
+        <h1><i class="fas fa-book"></i> Student Resource Hub</h1>
+        <label for="branch">Select Branch:</label>
+        <select id="branch" onchange="loadResources()">
+            <option value="">Select</option>
+            <option value="cse">CSE</option>
+            <option value="me">ME</option>
+            <option value="ce">CE</option>
+            <option value="ece">ECE</option>
+            <option value="ee">EE</option>
+        </select>
+
+        <!-- <div class="loader" id="loader" style="display:none;">Loading your love-filled resources... 💌</div> -->
+
+        <div id="resources">
+            <div class="year">
+                <h2>First Year</h2>
+                <div id="first-year"></div>
+            </div>
+            <div class="year">
+                <h2>Second Year</h2>
+                <div id="second-year"></div>
+            </div>
+            <div class="year">
+                <h2>Third Year</h2>
+                <div id="third-year"></div>
+            </div>
+            <div class="year">
+                <h2>Fourth Year</h2>
+                <div id="fourth-year"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="heart-container">💖</div> -->
+    <div id="heart-rain-container"></div>
+    <audio id="heart-sound" src="sounds/heart.mp3" preload="auto"></audio>
+   <script src="script.js"></script>
+</body>
+</html>
