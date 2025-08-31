@@ -156,7 +156,7 @@ To improve visibility and track usage:
 
 For feedback, queries, or resource contributions:
 
-- **Email**: [your-email@example.com](mailto:deepakk.ug23.cs@nitp.ac.in) (replace with your email).
+- **Email**: [deepakk.ug23.cs@nitp.ac.in](mailto:deepakk.ug23.cs@nitp.ac.in) (replace with your email).
 
 
 
